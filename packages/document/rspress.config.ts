@@ -17,7 +17,11 @@ export default defineConfig({
     pluginSitemap({
       domain: siteUrl,
     }),
-    pluginLlms(),
+    pluginLlms({
+      mdFiles: {
+        mdxToMd: false,
+      },
+    }),
     pluginFontOpenSans(),
     pluginRss({
       siteUrl,
